@@ -3,7 +3,8 @@ import { createSSRApp } from 'vue';
 export function createApp() {
   return createSSRApp({
     data: () => ({ count: 1, intervalTimer: null }),
-    template: `<p><div @click="handleClick()">{{ count }}</div></p>`,
+    template: `<div @click="handleClick()">{{ count }}</div>`,
+    // template: `<p><div @click="handleClick()">{{ count }}</div></p>`,
     // created () {
     //   this.intervalTimer = setInterval(() => {
     //     this.count++;

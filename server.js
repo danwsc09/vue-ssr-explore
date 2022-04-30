@@ -19,14 +19,14 @@ server.get('/', (req, res) => {
               "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
             }
           }
-        <script type="module" src="/client.js"></script>
         </script>
-        </head>
-        <body>
+        <script type="module" src="/client.js"></script>
+      </head>
+      <body>
         <div id="app">${html}</div>
-        </body>
-        </html>
-        `);
+      </body>
+    </html>
+    `);
   });
 });
 
