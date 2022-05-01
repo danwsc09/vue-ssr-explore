@@ -10,6 +10,11 @@ export function createApp() {
     //   }, 1000)
     // },
     created () {
+      console.log('I am created!')
+      const pew = localStorage.getItem('pew')
+      console.log('pew:', pew)
+    },
+    mounted () {
       this.intervalTimer = setInterval(() => {
         this.count++;
         console.log('increment from setInterval; count:', this.count);
