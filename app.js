@@ -11,8 +11,6 @@ export function createApp() {
     // },
     created () {
       console.log('I am created!')
-      const pew = localStorage.getItem('pew')
-      console.log('pew:', pew)
     },
     mounted () {
       this.intervalTimer = setInterval(() => {
@@ -20,14 +18,17 @@ export function createApp() {
         console.log('increment from setInterval; count:', this.count);
       }, 1000)
     },
+    beforeUpdate () {
+      console.log('in before update! current count:', this.count);
+    },
+    beforeUnmount () {
+      clearInterval(this.intervalTimer)
+    },
     methods: {
       handleClick () {
         this.count++;
         console.log('BUTTON CLICKED!');
       }
     },
-    beforeUnmount () {
-      clearInterval(this.intervalTimer)
-    }
   });
 }
