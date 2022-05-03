@@ -16,9 +16,11 @@ server.get('/', (req, res) => {
         <script type="importmap">
           {
             "imports": {
-              "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+              "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+              "axios": "https://cdn.skypack.dev/axios"
             }
           }
+          // "axios": "https://unpkg.com/axios/dist/axios.min.js"
         </script>
         <script type="module" src="/client.js"></script>
       </head>
